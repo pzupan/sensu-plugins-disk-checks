@@ -5,6 +5,21 @@ This CHANGELOG follows the format listed [here](https://github.com/sensu-plugins
 
 ## [Unreleased]
 
+## [5.0.0] - 2018-01-07
+### Breaking Changes
+- dropped ruby `< 2.3` support as they are EOL (@majormoses)
+- bump `sensu-plugin` library from `~> 1.2` to `~> 3.0` you can read about the breaking changes for [v3.x](https://github.com/sensu-plugins/sensu-plugin/blob/master/CHANGELOG.md#300---2018-12-04), [v2.0.1](https://github.com/sensu-plugins/sensu-plugin/blob/master/CHANGELOG.md#v201---2017-04-28), and [v2.0](https://github.com/sensu-plugins/sensu-plugin/blob/master/CHANGELOG.md#v200---2017-03-29)
+
+### Added
+- ruby 2.5 testing (@majormoses)
+
+### Changed
+- bumped runtime dependency of `sys-filesystem` from `1.1.7` to `1.2.0` (majormoses) (@dependabot)
+- bumped dev dependency of `bundler` from `~> 1.7` to `~> 2.0` (@majormoses)
+- bumped dev dependancy of `rubocop` from `~> 0.51.0` to `~> 0.57.0` (@dependabot)
+- appeased and/or tuned the cops (@majormoses)
+
+## [4.0.0] - 2018-01-07
 ### Breaking Changes
 - check-smart.rb: fixing a `undefined` error by renaming `no-smart-capable-disks` to `--zero-smart-capable_disks` as the parser sees any `--no-` argument and attempts to negate it which a `(True|False)Class` can not be cast to a symbol (@bdeluca)
 
@@ -190,7 +205,8 @@ https://mathias-kettner.de/checkmk_filesystems.html
 ### Added
 - initial release
 
-[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-disk-checks/compare/4.0.0...HEAD
+[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-disk-checks/compare/5.0.0...HEAD
+[5.0.0]: https://github.com/sensu-plugins/sensu-plugins-disk-checks/compare/4.0.0...5.0.0
 [4.0.0]: https://github.com/sensu-plugins/sensu-plugins-disk-checks/compare/3.1.1...4.0.0
 [3.1.1]: https://github.com/sensu-plugins/sensu-plugins-disk-checks/compare/3.1.0...3.1.1
 [3.1.0]: https://github.com/sensu-plugins/sensu-plugins-disk-checks/compare/3.0.1...3.1.0
